@@ -333,7 +333,7 @@ if [ "$OXIDE" = "1" ]; then
 	# If necessary, download and install latest Oxide
 	if [ "$INSTALL_OXIDE" = "1" ]; then
 		echo "Downloading and installing latest Oxide.."
-		OXIDE_URL=$(curl -sL https://api.github.com/repos/OxideMod/Oxide.Rust/releases/latest | grep browser_download_url | cut -d '"' -f 4)
+		OXIDE_URL=$(curl -sL https://appveyorcidata.blob.core.windows.net/umod-18290/umod-rust/4281/xhmuptmemnstimnn/Oxide.Rust-linux.zip | grep browser_download_url | cut -d '"' -f 4)
 		curl -sL $OXIDE_URL | bsdtar -xvf- -C /steamcmd/rust/
 
 	if [ -f "/steamcmd/rust/Compiler.x86_x64" ]; then
